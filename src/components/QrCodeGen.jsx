@@ -30,14 +30,14 @@ function QrCodeGen() {
                 </div>
               </form>
             </p>
-            <a
+            <button
               onClick={handleGenerateQr}
               type="submit"
               href="#"
               className="btn btn-primary"
             >
               Generate QR Code
-            </a>
+            </button>
           </div>
           <div className="card-footer">
             {value && <QRCode size={256} value={qr} />}
