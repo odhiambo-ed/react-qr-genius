@@ -1,6 +1,10 @@
+import { useState } from "react";
 import QRCode from "react-qr-code";
 
 function QrCodeGen() {
+  const [value, setValue] = useState("")
+  const [qr, setQr] = useState("")
+
   return (
     <div className="pt-5">
       <div className="row col-6 mx-auto">
@@ -11,7 +15,7 @@ function QrCodeGen() {
             <p className="card-text">
               <form action="">
                 <div className="form-group">
-                  <input className="form-control" type="text" />
+                  <input className="form-control" type="text" placeholder="Enter value" value={(e) => setValue(e.target.value)} />
                 </div>
               </form>
             </p>
