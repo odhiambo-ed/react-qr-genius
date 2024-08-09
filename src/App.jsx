@@ -1,11 +1,11 @@
 import './App.css'
-import QrCode from './components/QrCode'
+import QrCodeGen from './components/QrCodeGen'
 
 function App() {
 
   return (
     <div className='container-fluid bg-light vh-100 vw-100'>
-      <QrCode />
+      <QrCodeGen />
     </div>
   )
 }

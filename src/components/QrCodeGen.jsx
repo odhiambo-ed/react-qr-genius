@@ -1,6 +1,6 @@
 
 
-function QrCode() {
+function QrCodeGen() {
   return (
     <div className="pt-5">
       <div className="row col-6 mx-auto">
@@ -19,11 +19,13 @@ function QrCode() {
               Generate QR Code
             </a>
           </div>
-          <div className="card-footer text-muted">2 days ago</div>
+                  <div className="card-footer">
+                      <QrCode />
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default QrCode
+export default QrCodeGen
