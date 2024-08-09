@@ -10,7 +10,7 @@
 
 ## Live Demo Link
 
-[Project Live Link](https://react-load-more-hmr7ciqqw-white3ds-projects.vercel.app/)
+[Project Live Link](https://react-qr-genius-7lqfmo5d2-white3ds-projects.vercel.app )
 
 ## Built With
 
