@@ -1,11 +1,12 @@
 import './App.css'
+import QrCode from './components/QrCode'
 
 function App() {
 
   return (
-    <>
-      <h1>Jesus in You I trust</h1>
-    </>
+    <div className='container'>
+      <QrCode />
+    </div>
   )
 }
 
