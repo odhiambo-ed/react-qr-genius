@@ -2,7 +2,9 @@
 
 function QrCode() {
   return (
-    <div>QrCode</div>
+      <div className="pt-5">
+          <h2 className="text-center">Qr Code Genius</h2>
+    </div>
   )
 }
 
