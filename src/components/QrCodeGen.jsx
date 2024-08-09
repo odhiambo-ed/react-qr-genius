@@ -4,6 +4,7 @@ import QRCode from "react-qr-code";
 function QrCodeGen() {
   const [value, setValue] = useState("")
   const [qr, setQr] = useState("")
+  const qrRef = useRef(null)
 
   const handleGenerateQr = (e) => {
     e.preventDefault();
