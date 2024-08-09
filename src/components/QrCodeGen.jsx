@@ -1,4 +1,4 @@
-
+import QRCode from "react-qr-code";
 
 function QrCodeGen() {
   return (
@@ -19,8 +19,11 @@ function QrCodeGen() {
               Generate QR Code
             </a>
           </div>
-                  <div className="card-footer">
-                      <QrCode />
+          <div className="card-footer">
+            <QRCode
+              size={256}
+              value="edward"
+            />
           </div>
         </div>
       </div>
@@ -28,4 +31,4 @@ function QrCodeGen() {
   );
 }
 
-export default QrCodeGen
+export default QrCodeGen;
