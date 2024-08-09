@@ -8,10 +8,8 @@ function QrCodeGen() {
   const [qr, setQr] = useState("")
   const qrRef = useRef(null)
 
-  const handleGenerateQr = (e) => {
-    e.preventDefault();
+  const handleGenerateQr = () => {
     setQr(value)
-    setValue("")
 
   }
 
@@ -39,7 +37,7 @@ function QrCodeGen() {
           <div className="card-body">
             <h5 className="card-title">Enter Text or URL</h5>
             <p className="card-text">
-              <form action="">
+              <form onSubmit={handleGenerateQr} action="">
                 <div className="form-group">
                   <input
                     className="form-control"
@@ -51,14 +49,6 @@ function QrCodeGen() {
                 </div>
               </form>
             </p>
-            <button
-              onClick={handleGenerateQr}
-              type="submit"
-              href="#"
-              className="btn btn-primary"
-            >
-              Generate QR Code
-            </button>
           </div>
           <div className="card-footer">
             {value && (
