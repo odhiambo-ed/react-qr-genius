@@ -5,6 +5,11 @@ function QrCodeGen() {
   const [value, setValue] = useState("")
   const [qr, setQr] = useState("")
 
+  const handleGenerateQr = (e) => {
+    e.preventDefault();
+    setQr(value)
+    setValue("")
+  }
   return (
     <div className="pt-5">
       <div className="row col-6 mx-auto">
@@ -15,19 +20,27 @@ function QrCodeGen() {
             <p className="card-text">
               <form action="">
                 <div className="form-group">
-                  <input className="form-control" type="text" placeholder="Enter value" value={(e) => setValue(e.target.value)} />
+                  <input
+                    className="form-control"
+                    type="text"
+                    placeholder="Enter value"
+                    value={value}
+                    onChange={(e) => setValue(e.target.value)}
+                  />
                 </div>
               </form>
             </p>
-            <a href="#" className="btn btn-primary">
+            <a
+              onClick={handleGenerateQr}
+              type="submit"
+              href="#"
+              className="btn btn-primary"
+            >
               Generate QR Code
             </a>
           </div>
           <div className="card-footer">
-            <QRCode
-              size={256}
-              value="edward"
-            />
+            {value && <QRCode size={256} value={qr} />}
           </div>
         </div>
       </div>
