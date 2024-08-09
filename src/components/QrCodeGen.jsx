@@ -64,7 +64,7 @@ function QrCodeGen() {
             {value && (
               <>
                 <QRCode ref={qrRef} size={256} value={qr} />
-                <p>
+                <p className="d-flex gap-5 justify-content-center pt-3">
                   <button
                     onClick={handleDownload}
                     className="btn btn-secondary mt-3"
